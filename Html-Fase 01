@@ -4,26 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil do estudante</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 600px;
-            margin: auto;
-            padding: 20px;
-        }
-        .container {
-            text-align: center;
-        }
-        img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-        }
-        .info {
-            text-align: left;
-        }
-    </style>
-</head>
+   </head>
 <body>
     <div class="container">
         <h1>Willian Gomes Soares</h1>
