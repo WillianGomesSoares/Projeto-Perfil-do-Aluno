@@ -1,0 +1,28 @@
+body{
+    background-color: black;
+}
+.titulo{
+    color:white;
+}
+p{
+    color: white;
+}
+.container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.info{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.linkedin{
+    background-color: darkcyan;
+    padding: 3px;
+}
