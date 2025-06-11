@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Estudante</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="titulo">Willian Gomes Soares</h1>
+
+        <div class="gallery">
+            <img src="https://lh3.googleusercontent.com/pw/AP1GczN9UZPsdEpjDoOEI47QeGMvRGatzZnXkUI2gDE4TaUyvHujVBPUNpFT1Dnj3KVOtGYVfGFwqTBhzWPCnJgEZHb6LCJXJXARxHEewmS2fsWB_HVnouOpwxP0CyW6ihlHbbo-iDvmTPf06tEOrvhvF3PB=w522-h650-s-no?authuser=0" alt="Foto 1" onclick="openModal(this.src)">
+            <img src="https://th.bing.com/th/id/OIP.FPoJU6w6Ru8LPnllLPsEcAHaHa?rs=1&pid=ImgDetMain" alt="Foto 2" onclick="openModal(this.src)">
+            <img src="https://static.vecteezy.com/system/resources/previews/005/734/824/original/programming-code-icon-3d-low-polygonal-abstract-programming-code-symbol-in-hand-coding-or-hacker-background-development-and-software-concept-illustration-vector.jpg" alt="Foto 3" onclick="openModal(this.src)">
+        </div>
+
+        <table>
+            <tr>
+                <th>RA:</th>
+                <td>32120574</td>
+            </tr>
+            <tr>
+                <th>Curso e Período Atual:</th>
+                <td>Ciências da computação - 8º Período</td>
+            </tr>
+            <tr>
+                <th>E-mail:</th>
+                <td>williansoaresgomes@hotmail.com</td>
+            </tr>
+            <tr>
+                <th>Matérias Cursadas:</th>
+                <td>Ambientes computacionais e conectividade, Análise de dados e big data, Computação gráfica e realidade virtual, Estruturas de dados e análise de algoritmos, Estruturas matemáticas, Gestão e qualidade de software, Inovação, sustentabilidade e competitividade empresarial, Inteligência artificial, Modelagem de software, Modelos, métodos e técnicas da engenharia de software, Programação de soluções computacionais, Sistemas computacionais e segurança, Teoria da computação e compiladores, Core: Português e libras</td>
+            </tr>
+            <tr>
+                <th>Perfil Pessoal:</th>
+                <td>No meu tempo livre jogo RPG de mesa, jogos eletrônicos, e ajudo meu pai no trabalho dele.</td>
+            </tr>
+            <tr>
+                <th>Perfil Acadêmico:</th>
+                <td>Tenho interesse em Inteligência Artificial e Ciência de Dados, estudei no CEFET no meu ensino médio e estou terminando meu curso de inglês.</td>
+            </tr>
+            <tr>
+                <th>LinkedIn:</th>
+                <td><a href="https://www.linkedin.com/in/willian-gomes-soares-36692621a" target="_blank">Meu LinkedIn</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="modal" class="modal" onclick="closeModal()">
+        <img id="modal-img" src="">
+    </div>
+
+    <script>
+        function openModal(src) {
+            document.getElementById("modal-img").src = src;
+            document.getElementById("modal").style.display = "flex";
+        }
+
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+    </script>
+</body>
+</html>
