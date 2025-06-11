@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil do Estudante - Fase 03</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .input-block { margin-bottom: 10px; }
+        .uc-controls button { margin-left: 5px; }
+        .error { color: red; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="titulo">Willian Gomes Soares</h1>
+
+        <!-- Inputs adicionais -->
+        <div class="input-block">
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" placeholder="000.000.000-00">
+            <span id="cpf-error" class="error"></span>
+        </div>
+
+        <div class="input-block">
+            <label for="email">E-mail:</label>
+            <input type="text" id="email" placeholder="exemplo@email.com">
+            <span id="email-error" class="error"></span>
+        </div>
+
+        <div class="input-block">
+            <label for="novaDescricao">Adicionar ao Perfil Pessoal:</label>
+            <input type="text" id="novaDescricao">
+            <button onclick="adicionarDescricao()">Adicionar</button>
+        </div>
+
+        <div class="gallery">
+            <img src="https://lh3.googleusercontent.com/pw/AP1GczN9UZPsdEpjDoOEI47QeGMvRGatzZnXkUI2gDE4TaUyvHujVBPUNpFT1Dnj3KVOtGYVfGFwqTBhzWPCnJgEZHb6LCJXJXARxHEewmS2fsWB_HVnouOpwxP0CyW6ihlHbbo-iDvmTPf06tEOrvhvF3PB=w522-h650-s-no?authuser=0" alt="Foto 1" onclick="openModal(this.src)">
+            <img src="https://th.bing.com/th/id/OIP.FPoJU6w6Ru8LPnllLPsEcAHaHa?rs=1&pid=ImgDetMain" alt="Foto 2" onclick="openModal(this.src)">
+            <img src="https://static.vecteezy.com/system/resources/previews/005/734/824/original/programming-code-icon-3d-low-polygonal-abstract-programming-code-symbol-in-hand-coding-or-hacker-background-development-and-software-concept-illustration-vector.jpg" alt="Foto 3" onclick="openModal(this.src)">
+        </div>
+
+        <table id="perfil-table">
+            <tr><th>RA:</th><td>32120574</td></tr>
+            <tr><th>Curso e Período Atual:</th><td>Ciências da computação - 8º Período</td></tr>
+            <tr><th>E-mail:</th><td id="email-texto">williansoaresgomes@hotmail.com</td></tr>
+            <tr><th>UCs:</th>
+                <td>
+                    <ul id="uc-list">
+                        <li>Estruturas de dados e análise de algoritmos <span class="uc-controls"><button onclick="mover(this, -1)">↑</button><button onclick="mover(this, 1)">↓</button></span></li>
+                        <li>Inteligência Artificial <span class="uc-controls"><button onclick="mover(this, -1)">↑</button><button onclick="mover(this, 1)">↓</button></span></li>
+                        <li>Ambientes computacionais e conectividade <span class="uc-controls"><button onclick="mover(this, -1)">↑</button><button onclick="mover(this, 1)">↓</button></span></li>
+                        <li>Análise de dados e big data <span class="uc-controls"><button onclick="mover(this, -1)">↑</button><button onclick="mover(this, 1)">↓</button></span></li>
+                        <li>Computação gráfica e realidade virtual <span class="uc-controls"><button onclick="mover(this, -1)">↑</button><button onclick="mover(this, 1)">↓</button></span></li>
+                        <li>Estruturas matemáticas <span class="uc-controls"><button onclick="mover(this, -1)">↑</button><button onclick="mover(this, 1)">↓</button></span></li>
+                        <li>Gestão e qualidade de software <span class="uc-controls"><button onclick="mover(this, -1)">↑</button><button onclick="mover(this, 1)">↓</button></span></li>
+                        <li>Modelagem de software <span class="uc-controls"><button onclick="mover(this, -1)">↑</button><button onclick="mover(this, 1)">↓</button></span></li>
+                        <li>Inovação, sustentabilidade e competitividade empresarial <span class="uc-controls"><button onclick="mover(this, -1)">↑</button><button onclick="mover(this, 1)">↓</button></span></li>
+                        <li>Inteligência artificial <span class="uc-controls"><button onclick="mover(this, -1)">↑</button><button onclick="mover(this, 1)">↓</button></span></li>
+                        <li>Modelos, métodos e técnicas da engenharia de software <span class="uc-controls"><button onclick="mover(this, -1)">↑</button><button onclick="mover(this, 1)">↓</button></span></li>
+                        <li>Programação de soluções computacionais <span class="uc-controls"><button onclick="mover(this, -1)">↑</button><button onclick="mover(this, 1)">↓</button></span></li>
+                        <li>Sistemas computacionais e segurança <span class="uc-controls"><button onclick="mover(this, -1)">↑</button><button onclick="mover(this, 1)">↓</button></span></li>
+                        <li>Teoria da computação e compiladores <span class="uc-controls"><button onclick="mover(this, -1)">↑</button><button onclick="mover(this, 1)">↓</button></span></li>
+                        <li>Core: Português e libras <span class="uc-controls"><button onclick="mover(this, -1)">↑</button><button onclick="mover(this, 1)">↓</button></span></li>
+                        <li>Gestão de operações e serviços públicos <span class="uc-controls"><button onclick="mover(this, -1)">↑</button><button onclick="mover(this, 1)">↓</button></span></li>
+                    </ul>
+                    <button onclick="adicionarUC()">Adicionar UC</button>
+                </td>
+            </tr>
+            <tr><th>Perfil Pessoal:</th><td id="perfil-pessoal">No meu tempo livre jogo RPG de mesa, jogos eletrônicos, e ajudo meu pai no trabalho dele.</td></tr>
+            <tr><th>Perfil Acadêmico:</th><td>Tenho interesse em Inteligência Artificial e Ciência de Dados, estudei no CEFET no meu ensino médio e estou terminando meu curso de inglês.</td></tr>
+            <tr><th>Meu LinkedIn:</th>
+                <td><a href="https://www.linkedin.com/in/willian-gomes-soares-36692621a" target="_blank">Meu LinkedIn</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="modal" class="modal" onclick="closeModal()">
+        <img id="modal-img" src="">
+    </div>
+
+    <script>
+        function openModal(src) {
+            document.getElementById("modal-img").src = src;
+            document.getElementById("modal").style.display = "flex";
+        }
+
+        function closeModal() {
+            document.getElementById("modal").style.display = "none";
+        }
+
+        function adicionarUC() {
+            const uc = prompt("Digite o nome da nova UC:");
+            if (uc) {
+                const li = document.createElement("li");
+                li.innerHTML = `${uc} <span class='uc-controls'><button onclick='mover(this, -1)'>&uarr;</button><button onclick='mover(this, 1)'>&darr;</button></span>`;
+                document.getElementById("uc-list").appendChild(li);
+            }
+        }
+
+        function mover(button, direction) {
+            const li = button.closest("li");
+            const list = li.parentElement;
+            const index = Array.from(list.children).indexOf(li);
+            const target = index + direction;
+            if (target >= 0 && target < list.children.length) {
+                list.insertBefore(li, list.children[direction > 0 ? target + 1 : target]);
+            }
+        }
+
+        function adicionarDescricao() {
+            const texto = document.getElementById("novaDescricao").value;
+            if (texto.trim()) {
+                const atual = document.getElementById("perfil-pessoal");
+                atual.innerHTML += ' ' + texto;
+                document.getElementById("novaDescricao").value = '';
+            }
+        }
+
+        document.getElementById("cpf").addEventListener("blur", () => {
+            const cpf = document.getElementById("cpf").value;
+            const regex = /^\d{3}\.\d{3}\.\d{3}-\d{2}$/;
+            const erro = document.getElementById("cpf-error");
+            erro.textContent = regex.test(cpf) ? "" : "CPF inválido. Use o formato 000.000.000-00.";
+        });
+
+        document.getElementById("email").addEventListener("blur", () => {
+            const email = document.getElementById("email").value;
+            const regex = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
+            const erro = document.getElementById("email-error");
+            erro.textContent = regex.test(email) ? "" : "E-mail inválido.";
+        });
+    </script>
+</body>
+</html>
